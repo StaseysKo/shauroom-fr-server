@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: ["http://194.58.108.14:3000"],
+  origin: ["http://194.67.109.224:3000"],
 }));
 const port = process.env.PORT || 5000;
 
