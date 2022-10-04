@@ -6,7 +6,9 @@ import EmailSender from "./sendEmail.js";
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
+app.use(cors({
+  origin: ["http://194.67.109.224:3000"],
+}));
 const port = process.env.PORT || 5000;
 
 // ****** SEND API
@@ -21,5 +23,5 @@ app.post("/send", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`http://localhost:${port}`);
+  console.log(`server start`);
 });
